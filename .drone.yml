@@ -9,3 +9,9 @@ steps:
     - corepack enable pnpm
     - pnpm install
     - pnpm test
+- name: slack
+  image: plugins/slack
+  settings:
+    webhook: https://hooks.slack.com/services/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
+    channel: drone
+    icon_url: https://drone.i258.net/static/media/logo.76c744d4.svg
