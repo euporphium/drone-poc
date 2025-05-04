@@ -1,0 +1,17 @@
+when:
+  - event: push
+    branch: main
+
+steps:
+  - name: test
+    image: node:22
+    commands:
+      - corepack enable pnpm
+      - pnpm install
+      - pnpm test
+
+  - name: slack
+    image: plugins/slack
+    settings:
+      webhook:
+        from_secret: slack_webhook_url
