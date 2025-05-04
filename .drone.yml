@@ -14,6 +14,3 @@ steps:
   settings:
     webhook:
       from_secret: slack-webhook-url
-    channel: drone
-    username: Drone (Automated)
-    icon_url: https://drone.i258.net/static/media/logo.76c744d4.svg
